@@ -1,0 +1,89 @@
+    /* GENERAL THEME */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #02050a;
+        color: #00eaff;
+        overflow-x: hidden;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-size: 3.5em;
+        text-shadow: 0 0 20px #00eaff;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 10px #00eaff; }
+        to { text-shadow: 0 0 25px cyan, 0 0 40px #0ff; }
+    }
+
+    /* TECH CARD */
+    .card {
+        width: 350px;
+        margin: 50px auto;
+        padding: 25px;
+        border-radius: 15px;
+        background: rgba(0, 30, 50, 0.7);
+        border: 2px solid #00eaff;
+        box-shadow: 0 0 20px #00eaff;
+        cursor: pointer;
+        transition: transform .3s;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px #00eaff;
+    }
+
+    #message {
+        display: none;
+        font-size: 1.2em;
+    }
+
+    /* NEON BUTTONS */
+    button {
+        padding: 12px 25px;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #00eaff;
+        background: transparent;
+        border: 2px solid #00eaff;
+        border-radius: 10px;
+        cursor: pointer;
+        text-shadow: 0 0 10px #00eaff;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #00eaff;
+        color: #00141f;
+        box-shadow: 0 0 20px #00eaff;
+    }
+
+    /* MATRIX BACKGROUND */
+    .matrix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.4;
+    }
+
+    /* FLOATING TECH ORBS */
+    .orb {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle, #00eaff, transparent);
+        border-radius: 50%;
+        animation: drift 8s infinite ease-in-out;
+    }
+
+    @keyframes drift {
+        0% { transform: translateY(110vh) scale(0.6); }
+        100% { transform: translateY(-20vh) scale(1.2); }
+    }
